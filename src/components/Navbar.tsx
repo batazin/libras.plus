@@ -17,7 +17,7 @@ export function Navbar() {
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex items-center gap-3 rounded-xl py-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+          className="flex items-center gap-3 rounded-sm py-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
         >
           <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white ring-1 ring-border">
             <Image
@@ -72,7 +72,7 @@ export function Navbar() {
           <Link
             href="/orcamento"
             aria-current={pathname === "/orcamento" ? "page" : undefined}
-            className="hidden whitespace-nowrap rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-brand-ink transition-colors duration-150 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.98] sm:inline-flex"
+            className="hidden whitespace-nowrap led-border rounded-sm bg-brand px-5 py-2.5 text-sm font-semibold text-brand-ink transition-colors duration-150 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.98] sm:inline-flex"
           >
             {BRAND.primaryCta}
           </Link>
@@ -83,7 +83,7 @@ export function Navbar() {
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
             aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface-card text-ink lg:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-border bg-surface-card text-ink lg:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             {mobileOpen ? (
               <X size={20} weight="bold" aria-hidden="true" />
@@ -113,7 +113,7 @@ export function Navbar() {
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
                   onClick={() => setMobileOpen(false)}
-                  className={`rounded-xl px-3 py-2.5 text-base font-medium transition-colors ${
+                  className={`rounded-sm px-3 py-2.5 text-base font-medium transition-colors ${
                     isActive
                       ? "bg-brand-soft font-semibold text-brand-text"
                       : "text-ink hover:bg-surface-elevated"
@@ -126,7 +126,7 @@ export function Navbar() {
             <Link
               href="/orcamento"
               onClick={() => setMobileOpen(false)}
-              className="mt-3 inline-flex w-full items-center justify-center rounded-full bg-brand px-5 py-3 text-sm font-semibold text-brand-ink transition-colors hover:bg-brand-hover"
+              className="mt-3 inline-flex w-full items-center justify-center led-border rounded-sm bg-brand px-5 py-3 text-sm font-semibold text-brand-ink transition-colors hover:bg-brand-hover"
             >
               {BRAND.primaryCta}
             </Link>

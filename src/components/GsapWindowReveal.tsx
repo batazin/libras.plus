@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface GsapWindowRevealProps {
   children: ReactNode;
-  mode?: "curtain" | "slide";
+  mode?: "curtain" | "slide" | "tilt3d" | "stagger3d";
   delay?: number;
   className?: string;
 }
@@ -31,17 +31,72 @@ export function GsapWindowReveal({
     if (reduceMotion) return;
 
     const ctx = gsap.context(() => {
+      if (mode === "tilt3d") {
+        // Swings in from a 3D angle, tied to scroll position
+        gsap.fromTo(
+          el,
+          {
+            rotateY: -28,
+            rotateX: 10,
+            z: -160,
+            opacity: 0.2,
+            transformPerspective: 1300,
+            transformOrigin: "left center",
+          },
+          {
+            rotateY: 0,
+            rotateX: 0,
+            z: 0,
+            opacity: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 92%",
+              end: "top 45%",
+              scrub: 0.8,
+            },
+          }
+        );
+        return;
+      }
+
+      if (mode === "stagger3d") {
+        // Children flip up one after another like cards
+        const items = el.querySelectorAll<HTMLElement>("[data-reveal-item]");
+        gsap.fromTo(
+          items,
+          {
+            rotateX: -75,
+            y: 40,
+            opacity: 0,
+            transformPerspective: 900,
+            transformOrigin: "center top",
+          },
+          {
+            rotateX: 0,
+            y: 0,
+            opacity: 1,
+            duration: 0.9,
+            delay,
+            stagger: 0.14,
+            ease: "back.out(1.4)",
+            scrollTrigger: { trigger: el, start: "top 82%", once: true },
+          }
+        );
+        return;
+      }
+
       if (mode === "curtain") {
         const img = el.querySelector("img");
 
         gsap.fromTo(
           el,
           {
-            clipPath: "inset(0% 18% 0% 18% round 20px)",
+            clipPath: "inset(0% 18% 0% 18% round 6px)",
             opacity: 0.45,
           },
           {
-            clipPath: "inset(0% 0% 0% 0% round 16px)",
+            clipPath: "inset(0% 0% 0% 0% round 6px)",
             opacity: 1,
             duration: 0.85,
             delay,

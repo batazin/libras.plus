@@ -107,8 +107,8 @@ export function QuoteForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-brand/40 bg-surface-card p-6 sm:p-8">
-        <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand-text">
+      <div className="rounded-md border border-brand/40 bg-surface-card p-6 sm:p-8">
+        <div className="inline-flex h-12 w-12 items-center justify-center rounded-sm bg-brand-soft text-brand-text">
           <CheckCircle size={26} weight="fill" aria-hidden="true" />
         </div>
         <h3 className="mt-4 font-display text-2xl font-bold text-ink">
@@ -121,7 +121,7 @@ export function QuoteForm() {
           <button
             type="button"
             onClick={() => setStatus("idle")}
-            className="rounded-full border border-border bg-surface-elevated px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="rounded-sm border border-border bg-surface-elevated px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             Enviar outra solicitação
           </button>
@@ -129,7 +129,7 @@ export function QuoteForm() {
             href={BRAND.linktreeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-brand-ink transition-colors hover:bg-brand-hover"
+            className="inline-flex items-center gap-2 led-border rounded-sm bg-brand px-5 py-2.5 text-sm font-semibold text-brand-ink transition-colors hover:bg-brand-hover"
           >
             <span>Abrir canais diretos</span>
             <ArrowSquareOut size={16} weight="bold" aria-hidden="true" />
@@ -143,7 +143,7 @@ export function QuoteForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="rounded-2xl border border-border bg-surface-card p-6 sm:p-8"
+      className="rounded-md border border-border bg-surface-card p-6 sm:p-8"
     >
       <div className="space-y-5">
         <div className="flex flex-col gap-2">
@@ -161,7 +161,7 @@ export function QuoteForm() {
             placeholder="Ex: Marina Souza / Instituto Horizonte"
             aria-invalid={Boolean(errors.name)}
             aria-describedby={errors.name ? "quote-name-error" : "quote-name-help"}
-            className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-ink placeholder:text-ink-muted/75 focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
+            className="w-full rounded-sm border border-border bg-surface px-4 py-3 text-sm text-ink placeholder:text-ink-muted/75 focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
           />
           <p id="quote-name-help" className="text-xs text-ink-muted">
             Informe quem será o ponto de contato para a proposta.
@@ -189,7 +189,7 @@ export function QuoteForm() {
               placeholder="nome@empresa.com.br"
               aria-invalid={Boolean(errors.email)}
               aria-describedby={errors.email ? "quote-email-error" : undefined}
-              className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-ink placeholder:text-ink-muted/75 focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
+              className="w-full rounded-sm border border-border bg-surface px-4 py-3 text-sm text-ink placeholder:text-ink-muted/75 focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
             />
             {errors.email && (
               <p id="quote-email-error" className="text-xs font-medium text-red-600 dark:text-red-400">
@@ -213,7 +213,7 @@ export function QuoteForm() {
               placeholder="(16) 99999-0000"
               aria-invalid={Boolean(errors.phone)}
               aria-describedby={errors.phone ? "quote-phone-error" : undefined}
-              className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-ink placeholder:text-ink-muted/75 focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
+              className="w-full rounded-sm border border-border bg-surface px-4 py-3 text-sm text-ink placeholder:text-ink-muted/75 focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
             />
             {errors.phone && (
               <p id="quote-phone-error" className="text-xs font-medium text-red-600 dark:text-red-400">
@@ -232,7 +232,7 @@ export function QuoteForm() {
             name="service"
             value={service}
             onChange={(e) => setService(e.target.value)}
-            className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-ink focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
+            className="w-full rounded-sm border border-border bg-surface px-4 py-3 text-sm text-ink focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
           >
             <option value="Interpretação simultânea">
               Interpretação simultânea / evento ao vivo
@@ -263,7 +263,7 @@ export function QuoteForm() {
             placeholder="Conte a data prevista, cidade ou formato online, duração estimada e tema do encontro ou vídeo."
             aria-invalid={Boolean(errors.details)}
             aria-describedby={errors.details ? "quote-details-error" : "quote-details-help"}
-            className="w-full resize-y rounded-xl border border-border bg-surface px-4 py-3 text-sm text-ink placeholder:text-ink-muted/75 focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
+            className="w-full resize-y rounded-sm border border-border bg-surface px-4 py-3 text-sm text-ink placeholder:text-ink-muted/75 focus:border-brand focus:outline-2 focus:outline-offset-0 focus:outline-brand"
           />
           <p id="quote-details-help" className="text-xs text-ink-muted">
             Quanto mais contexto, mais rápido dimensionamos a equipe ideal.
@@ -278,7 +278,7 @@ export function QuoteForm() {
         {status === "error" && (
           <div
             role="alert"
-            className="flex items-start gap-2.5 rounded-xl border border-red-500/40 bg-red-500/10 p-3.5 text-sm text-red-700 dark:text-red-300"
+            className="flex items-start gap-2.5 rounded-sm border border-red-500/40 bg-red-500/10 p-3.5 text-sm text-red-700 dark:text-red-300"
           >
             <WarningCircle size={18} weight="fill" className="mt-0.5 shrink-0" aria-hidden="true" />
             <span>{serverMessage}</span>
@@ -288,7 +288,7 @@ export function QuoteForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-brand-ink transition-all duration-150 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-65"
+          className="inline-flex w-full items-center justify-center gap-2 led-border rounded-sm bg-brand px-6 py-3.5 text-sm font-semibold text-brand-ink transition-all duration-150 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-65"
         >
           <PaperPlaneTilt size={18} weight="bold" aria-hidden="true" />
           <span>

@@ -46,7 +46,7 @@ export function SectorsBento() {
 
       <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-6">
         <GsapWindowReveal mode="curtain" className="md:col-span-4">
-          <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface-card">
+          <article className="flex h-full flex-col overflow-hidden rounded-md border border-border bg-surface-card">
             <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface-elevated">
               <Image
                 src="/images/corporate-inclusion.jpg"
@@ -76,9 +76,9 @@ export function SectorsBento() {
         </GsapWindowReveal>
 
         <GsapWindowReveal delay={0.05} className="md:col-span-2">
-          <article className="flex h-full flex-col justify-between rounded-2xl bg-surface-contrast p-6 text-ink-contrast sm:p-7">
+          <article className="flex h-full flex-col justify-between rounded-md bg-surface-contrast p-6 text-ink-contrast sm:p-7">
             <div>
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand/20 text-brand-text">
+              <div className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-brand/20 text-brand-text">
                 <SectorIcon id={eventos.id} />
               </div>
               <h3 className="mt-6 font-display text-2xl font-bold">
@@ -95,9 +95,9 @@ export function SectorsBento() {
         </GsapWindowReveal>
 
         <GsapWindowReveal delay={0.08} className="md:col-span-2">
-          <article className="flex h-full flex-col justify-between rounded-2xl border border-border bg-surface-card p-6 sm:p-7">
+          <article className="flex h-full flex-col justify-between rounded-md border border-border bg-surface-card p-6 sm:p-7">
             <div>
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand-text">
+              <div className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-brand-soft text-brand-text">
                 <SectorIcon id={ensino.id} />
               </div>
               <h3 className="mt-5 font-display text-xl font-bold text-ink">
@@ -114,9 +114,9 @@ export function SectorsBento() {
         </GsapWindowReveal>
 
         <GsapWindowReveal delay={0.11} className="md:col-span-2">
-          <article className="flex h-full flex-col justify-between rounded-2xl border border-border bg-surface-elevated p-6 sm:p-7">
+          <article className="flex h-full flex-col justify-between rounded-md border border-border bg-surface-elevated p-6 sm:p-7">
             <div>
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-surface-card text-brand-text">
+              <div className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-surface-card text-brand-text">
                 <SectorIcon id={cultura.id} />
               </div>
               <h3 className="mt-5 font-display text-xl font-bold text-ink">
@@ -133,9 +133,9 @@ export function SectorsBento() {
         </GsapWindowReveal>
 
         <GsapWindowReveal delay={0.14} className="md:col-span-2">
-          <article className="flex h-full flex-col justify-between rounded-2xl border border-brand/35 bg-brand-soft p-6 sm:p-7">
+          <article className="flex h-full flex-col justify-between rounded-md border border-brand/35 bg-brand-soft p-6 sm:p-7">
             <div>
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-surface-card text-brand-text">
+              <div className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-surface-card text-brand-text">
                 <SectorIcon id={audiovisual.id} />
               </div>
               <h3 className="mt-5 font-display text-xl font-bold text-ink">

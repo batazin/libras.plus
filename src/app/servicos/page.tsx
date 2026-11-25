@@ -41,7 +41,7 @@ export default function ServicosPage() {
               {TRUST_PILLARS.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-border bg-surface-card p-6"
+                  className="rounded-md border border-border bg-surface-card p-6"
                 >
                   <h3 className="font-display text-lg font-bold text-ink">
                     {item.title}

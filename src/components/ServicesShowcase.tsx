@@ -47,7 +47,7 @@ export function ServicesShowcase() {
                 aria-selected={isSelected}
                 aria-controls={`panel-${service.id}`}
                 onClick={() => setActiveId(service.id)}
-                className={`group w-full rounded-2xl border p-5 text-left transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.99] ${
+                className={`group w-full rounded-md border p-5 text-left transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.99] ${
                   isSelected
                     ? "border-brand bg-surface-card"
                     : "border-border bg-surface-elevated/60 hover:border-brand/50 hover:bg-surface-card"
@@ -89,7 +89,7 @@ export function ServicesShowcase() {
               animate={{ opacity: 1, y: 0 }}
               exit={reduceMotion ? undefined : { opacity: 0, y: -8 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="overflow-hidden rounded-2xl border border-border bg-surface-card"
+              className="overflow-hidden rounded-md border border-border bg-surface-card"
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface-elevated">
                 <Image
@@ -132,7 +132,7 @@ export function ServicesShowcase() {
                   </span>
                   <Link
                     href="/orcamento"
-                    className="inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-brand-ink transition-colors duration-150 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.98]"
+                    className="inline-flex whitespace-nowrap items-center gap-2 led-border rounded-sm bg-brand px-5 py-2.5 text-sm font-semibold text-brand-ink transition-colors duration-150 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.98]"
                   >
                     <span>{BRAND.primaryCta}</span>
                     <ArrowRight size={16} weight="bold" aria-hidden="true" />

@@ -28,7 +28,7 @@ export function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label={isDark ? "Ativar tema claro" : "Ativar tema escuro"}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface-card text-ink transition-transform duration-150 hover:border-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.98]"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-border bg-surface-card text-ink transition-transform duration-150 hover:border-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.98]"
     >
       {mounted && isDark ? (
         <Sun size={18} weight="bold" aria-hidden="true" />

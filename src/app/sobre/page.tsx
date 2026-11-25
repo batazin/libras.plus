@@ -38,7 +38,7 @@ export default function SobrePage() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-border bg-surface-elevated">
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-md border border-border bg-surface-elevated">
                 <Image
                   src="/images/studio-translation.jpg"
                   alt="Estúdio de gravação da Libras Plus preparado para tradução audiovisual em janela de Libras."

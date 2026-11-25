@@ -52,7 +52,7 @@ export default function OrcamentoPage() {
                 <FaqAccordion />
               </div>
 
-              <div className="mt-8 rounded-2xl border border-border bg-surface-elevated/60 p-6">
+              <div className="mt-8 rounded-md border border-border bg-surface-elevated/60 p-6">
                 <h3 className="font-display text-lg font-bold text-ink">
                   Canais oficiais
                 </h3>

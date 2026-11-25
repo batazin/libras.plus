@@ -39,7 +39,7 @@ export default function AtuacaoPage() {
             </div>
             <Link
               href="/orcamento"
-              className="inline-flex shrink-0 whitespace-nowrap items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-brand-ink transition-colors hover:bg-brand-hover"
+              className="inline-flex shrink-0 whitespace-nowrap items-center gap-2 led-border rounded-sm bg-brand px-6 py-3.5 text-sm font-semibold text-brand-ink transition-colors hover:bg-brand-hover"
             >
               <span>{BRAND.primaryCta}</span>
               <ArrowRight size={16} weight="bold" aria-hidden="true" />

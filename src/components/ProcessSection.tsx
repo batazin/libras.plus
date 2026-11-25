@@ -33,7 +33,7 @@ export function ProcessSection() {
           <div className="mt-8">
             <Link
               href="/orcamento"
-              className="inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-brand-ink transition-colors duration-150 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.98]"
+              className="inline-flex whitespace-nowrap items-center gap-2 led-border rounded-sm bg-brand px-6 py-3 text-sm font-semibold text-brand-ink transition-colors duration-150 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand active:scale-[0.98]"
             >
               <span>{BRAND.primaryCta}</span>
               <ArrowRight size={16} weight="bold" aria-hidden="true" />
@@ -45,9 +45,9 @@ export function ProcessSection() {
           <ol className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {PROCESS_STAGES.map((stage, index) => (
               <GsapWindowReveal key={stage.title} delay={index * 0.05}>
-                <li className="flex h-full flex-col justify-between rounded-2xl border border-border bg-surface-card p-6">
+                <li className="flex h-full flex-col justify-between rounded-md border border-border bg-surface-card p-6">
                   <div>
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-soft font-display text-sm font-bold text-brand-text">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-sm bg-brand-soft font-display text-sm font-bold text-brand-text">
                       {index + 1}
                     </span>
                     <h3 className="mt-4 font-display text-lg font-bold text-ink">

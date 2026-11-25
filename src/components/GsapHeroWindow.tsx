@@ -42,11 +42,11 @@ export function GsapHeroWindow({
         tl.fromTo(
           mediaBox,
           {
-            clipPath: "inset(8% 12% 8% 12% round 24px)",
+            clipPath: "inset(8% 12% 8% 12% round 6px)",
             opacity: 0.4,
           },
           {
-            clipPath: "inset(0% 0% 0% 0% round 16px)",
+            clipPath: "inset(0% 0% 0% 0% round 6px)",
             opacity: 1,
             duration: 0.9,
           },

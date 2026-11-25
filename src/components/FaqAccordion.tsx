@@ -14,7 +14,7 @@ export function FaqAccordion() {
         return (
           <div
             key={item.id}
-            className="rounded-2xl border border-border bg-surface-card transition-colors"
+            className="rounded-md border border-border bg-surface-card transition-colors"
           >
             <button
               type="button"
