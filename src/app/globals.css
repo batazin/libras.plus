@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --surface: #faf8f5;
+  --surface-elevated: #f2ede6;
+  --surface-card: #ffffff;
+  --surface-contrast: #1b1815;
+  --ink: #1b1815;
+  --ink-muted: #57514b;
+  --ink-contrast: #faf8f5;
+  --border: #e3dbd0;
+  --brand: #ba4f07;
+  --brand-hover: #9f4205;
+  --brand-ink: #faf8f5;
+  --brand-text: #a84405;
+  --brand-soft: rgba(186, 79, 7, 0.08);
+}
+
+.dark {
+  --surface: #141210;
+  --surface-elevated: #1c1916;
+  --surface-card: #221e1a;
+  --surface-contrast: #2a241f;
+  --ink: #f5f1ec;
+  --ink-muted: #b3aba2;
+  --ink-contrast: #f5f1ec;
+  --border: #2f2a24;
+  --brand: #e07828;
+  --brand-hover: #eb8a3d;
+  --brand-ink: #141210;
+  --brand-text: #e5893d;
+  --brand-soft: rgba(224, 120, 40, 0.1);
+}
+
+@theme inline {
+  --font-display: "Outfit Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-card: var(--surface-card);
+  --color-surface-contrast: var(--surface-contrast);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-contrast: var(--ink-contrast);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-text: var(--brand-text);
+  --color-brand-soft: var(--brand-soft);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--brand);
+  color: var(--brand-ink);
+}
